@@ -5,9 +5,9 @@ module.exports =
   # See styling options for tabs and other native components in app/common/native-styles/ios.css or app/common/native-styles/android.css
   tabs: [
     {
-      title: "Index"
+      title: "To Do"
       id: "index"
-      location: "example#getting-started" # Supersonic module#view type navigation
+      location: "example#to-do" # Supersonic module#view type navigation
     }
     {
       title: "Settings"
@@ -21,8 +21,8 @@ module.exports =
     }
   ]
 
-  # rootView:
-  #   location: "example#getting-started"
+  rootView:
+     location: "example#to-do"
 
   preloads: [
     {
@@ -43,6 +43,6 @@ module.exports =
   #   options:
   #     animation: "swingingDoor"
   #
-  # initialView:
-  #   id: "initialView"
-  #   location: "example#initial-view"
+  initialView:
+   id: "initialView"
+   location: "example#initial-view"

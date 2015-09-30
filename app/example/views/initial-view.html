@@ -1,13 +1,27 @@
+<div ng-controller="LoginController">
 <super-navbar>
   <super-navbar-title>
     Login
   </super-navbar-title>
 </super-navbar>
 
-<div class="padding">
+<div class="padding" >
 
   <p>Please use the mock log in button below to dismiss the Initial View and initialize the rest of your app.</p>
+  <div class="list">
+    <label class="item item-input">
+      <input type="text" placeholder="First Name">
+    </label>
+    <label class="item item-input">
+      <input type="text" placeholder="Last Name">
+    </label>
+    <label class="item item-input">
+      <textarea placeholder="Comments"></textarea>
+    </label>
+  </div>
+  <button ng-click="userLogin()" class="button button-block button-balanced">Log in</button>
+    <button onclick="supersonic.ui.initialView.dismiss();" class="button button-block button-balanced">Dismiss</button>
 
-  <button onclick="supersonic.ui.initialView.dismiss()" class="button button-block button-balanced">Log in</button>
+</div>
 
 </div>
