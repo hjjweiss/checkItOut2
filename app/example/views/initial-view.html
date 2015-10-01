@@ -1,4 +1,4 @@
-<div ng-controller="LoginController">
+<div ng-controller="FormController">
 <super-navbar>
   <super-navbar-title>
     Login
@@ -7,20 +7,21 @@
 
 <div class="padding" >
 
-  <p>Please use the mock log in button below to dismiss the Initial View and initialize the rest of your app.</p>
+  <p>Please sign in as an existing user or create a new account.</p>
   <div class="list">
-    <label class="item item-input">
-      <input type="text" placeholder="First Name">
+    <label class="item item-input" for="first name">
+      <input type="text" placeholder="First Name" name="name" ng-model="name" class="form-control" required />
     </label>
-    <label class="item item-input">
-      <input type="text" placeholder="Last Name">
+    <label class="item item-input" for "last name">
+      <input type="text" placeholder="Last Name" name="name" ng-model="name" class="form-control" required />
     </label>
-    <label class="item item-input">
-      <textarea placeholder="Comments"></textarea>
+    <label class="item item-input" for="email">
+      <input type="text" placeholder="Email Address" name="email" ng-model="email" class="form-control item item-input" required />
     </label>
   </div>
-  <button ng-click="userLogin()" class="button button-block button-balanced">Log in</button>
-    <button onclick="supersonic.ui.initialView.dismiss();" class="button button-block button-balanced">Dismiss</button>
+
+  <button ng-click="userLogin()" class="button button-block button-balanced">Submit</button>
+  <button onclick="supersonic.ui.initialView.dismiss();" class="button button-block button-balanced">Dismiss</button>
 
 </div>
 

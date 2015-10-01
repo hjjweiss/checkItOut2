@@ -1,4 +1,4 @@
-<div class="padding" ng-controller="ToDoController">
+<div class="padding" ng-controller="FormController">
 
   <super-navbar>
     <super-navbar-title>
@@ -6,9 +6,18 @@
     </super-navbar-title>
   </super-navbar>
   <ul class="list">
-      <li class="item">Item 1</li>
-      <li class="item">Item 2</li>
-      <li class="item">Item 3</li>
+      <li class="item item-checkbox">
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>Item 1</li>
+      <li class="item item-checkbox">
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>Item 2</li>
+      <li class="item item-checkbox">
+        <label class="checkbox">
+        <input type="checkbox">
+        </label>Item 3</li>
   </ul>
   <button ng-click="dataTest()" class="button button-block button-balanced">Test data</button>
 </div>
