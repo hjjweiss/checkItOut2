@@ -2,6 +2,13 @@ angular
   .module('example')
   .controller('FormController', function($scope) {
 
+if (Parse.User.current()) {
+  new todo();
+} else {
+  new initial-view();
+}
+
+}
     $scope.userLogin = function(form) {
         supersonic.logger.info(form);
         supersonic.logger.info($scope.name);

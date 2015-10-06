@@ -8,20 +8,23 @@
 <div class="padding" >
 
   <p>Please sign in as an existing user or create a new account.</p>
-  <div class="list">
-    <label class="item item-input" for="first name">
-      <input type="text" placeholder="First Name" name="name" ng-model="name" class="form-control" required />
-    </label>
-    <label class="item item-input" for "last name">
-      <input type="text" placeholder="Last Name" name="name" ng-model="name" class="form-control" required />
-    </label>
-    <label class="item item-input" for="email">
-      <input type="text" placeholder="Email Address" name="email" ng-model="email" class="form-control item item-input" required />
-    </label>
-  </div>
-
-  <button ng-click="userLogin()" class="button button-block button-balanced">Submit</button>
+<form class="FormController">
+  <h2> Log In </h2>
+  <div class="error" style="display:none"></div>
+  <input type="text" id="login-username" placeholder="Username" />
+  <input type="password" id="login-password" placeholder="Password" />
+  <button ng-click="userLogin()" class="button button-block button-balanced">Login</button>
   <button onclick="supersonic.ui.initialView.dismiss();" class="button button-block button-balanced">Dismiss</button>
+</form>
+
+<form class="signup-form">
+  <h2>Sign Up</h2>
+  <div class="error" style="display:none"></div>
+  <input type="text" id="signup-username" placeholder="Username" />
+  <input type="password" id="signup-password" placeholder="Create a Password" />
+  <button ng-click="userSignup()" class="button button-block button-balanced">Sign Up</button>
+  <button onclick="supersonic.ui.initialView.dismiss();" class="button button-block button-balanced">Dismiss</button>
+</form>
 
 </div>
 

@@ -7,7 +7,7 @@ module.exports =
     {
       title: "To Do"
       id: "index"
-      location: "example#to-do" # Supersonic module#view type navigation
+      location: "example#todo" # Supersonic module#view type navigation
     }
     {
       title: "Settings"
@@ -22,7 +22,7 @@ module.exports =
   ]
 
   rootView:
-     location: "example#to-do"
+     location: "example#todo"
 
   preloads: [
     {
