@@ -5,10 +5,32 @@ angular
 if (Parse.User.current()) {
   new todo();
 } else {
-  new initial-view();
+  new initialview();
 }
 
-}
+Parse.User.logIn(username, password, {
+  success: function(user) {
+    new todo();
+    self.undelegateEvents();
+  },
+  error: function(user, error) {
+    self.$(".login-form .error").html("Invalid username or password. Please try again.").show();
+    this.$(".login-form button").removeAttr("disabled");
+  }
+  });
+
+Parse.User.signUp(username, password, {ACL: new Parse.ACL()}, {
+  success: function(user) {
+    new todo();
+    self.undelegateEvents();
+    delete self;
+  }
+  error: function (user, error) {
+    self.$(".signup-form .error").html(error.message).show();
+    this.$(".signup-form button").removeAttr("disabled");
+  }
+});
+
     $scope.userLogin = function(form) {
         supersonic.logger.info(form);
         supersonic.logger.info($scope.name);
