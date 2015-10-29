@@ -6,18 +6,18 @@ module.exports =
   tabs: [
     {
       title: "To Do"
-      id: "index"
+      id: "todo"
       location: "example#todo" # Supersonic module#view type navigation
+    }
+    {
+      title: "Stores"
+      id: "stores"
+      location: "example#stores"
     }
     {
       title: "Settings"
       id: "settings"
-      location: "example#settings"
-    }
-    {
-      title: "Internet"
-      id: "internet"
-      location: "http://google.com" # URLs are supported!
+      location: "example#settings" # URLs are supported!
     }
   ]
 

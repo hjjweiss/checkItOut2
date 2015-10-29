@@ -2,9 +2,12 @@
  * These styles apply for native components on iOS.
  * Read more about native styles at http://docs.appgyver.com
  ***********************************************************/
-
+button button-block button-balanced {
+  background-color: #74B869;
+  color: #ffffff;
+}
 navigation-bar {
-  background-color: #00B5FF;
+  background-color: #3D6C35;
   color: #ffffff;
 }
 
@@ -34,14 +37,14 @@ tab-bar tab-bar-item:selected {
   color: #1596f7;
 }
 
-tab-bar-item#settings {
-  background-image: url(icons/cog.svg);
-}
-
-tab-bar-item#index {
+tab-bar-item#todo {
   background-image: url(icons/home.svg);
 }
 
-tab-bar-item#internet {
+tab-bar-item#stores {
   background-image: url(icons/search.svg);
+}
+
+tab-bar-item#settings {
+  background-image: url(icons/cog.svg);
 }
